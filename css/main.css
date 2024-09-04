@@ -1,7 +1,42 @@
 * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 0;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+:root {
+    --main-color: #1076ca;
+    --second-color: #252525;
+    --main-background-color: #eee;
+    --main-padding: 20px;
 }
 body {
     font-family: "Roboto", sans-serif;
 }
+/* end Global Rules */
+/* Start Container */
+.container{
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width:768px){
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px){
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Container */
