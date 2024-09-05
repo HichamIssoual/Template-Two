@@ -279,5 +279,98 @@ body {
     text-align: center;
 }
 /* Start Services Section*/
-
+.container .srv {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+.container .srv .card {
+    position: relative;
+    width: 48%;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 10px;
+    background-color: #eee;
+    transition: 1s;
+    line-height: 1.6;
+    border-radius: 1%;
+}
+.container .srv .card:hover {
+    box-shadow: 0px 0px 10px 2px var(--main-color);
+    color: var(--second-color);
+}
+.container .srv .card .icon i {
+    color: var(--main-color);
+}
+.container .srv .card .title-description h3 {
+    color: var(--main-color);
+}
+.container .srv .card .icon {
+    margin-top: 18px;
+    font-size: 50px;
+}
+@media (max-width:693px){
+    .container .srv .card {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: 3%;
+    }
+    .container .srv .card .icon {
+        font-size: 30px;
+    }
+}
+.background {
+    background-color: var(--second-color);
+    background-image: url("../images/design-features.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    height: 80vh;
+    overflow: hidden;
+}
+.background .imgs {
+    position: relative;
+    bottom: -100px;
+    left: 40px;
+}
+.background .imgs img {
+    width: 100%;
+}
+.background .our-design {
+    padding: 15px;
+    background-color: #1076ca98;
+    color: white;
+}
+.background .our-design .features li{
+    margin-bottom: 15px;
+}
+.background .our-design .features li::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\e163";
+    margin-right: 10px;
+}
+@media (max-width:768px) {
+    .background .imgs img {
+        display: none;
+    }
+    .background {
+        justify-content: flex-start;
+    }
+    .background .our-design {
+        width: 100%;
+    }
+}
 /* End Services Section*/
+/* Start Portfolio Section*/
+
+/* End Portfolio Section*/
