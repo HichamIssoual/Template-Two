@@ -67,8 +67,32 @@ body {
     width:45%;
     align-items: center;
 }
-@media (max-width:768px) {
-    .header .container .links {
+.header .container .nav .bars {
+    margin-right: 10px;
+}
+@media (max-width:768px){
+    .container .nav .links {
+        display: none;
+    }
+    .container .nav .click:hover + ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0px;
+        align-items: flex-start;
+        background-color: #21649b69;
+        width: 100%;
+    }
+    .header .container .links li a:hover::before,
+    .header .container .links li .active::before {
+        display: none;
+    }
+}
+@media (min-width:768px) {
+    .header .container .nav .bars {
         display: none;
     }
 }
