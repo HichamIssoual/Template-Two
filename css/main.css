@@ -162,7 +162,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #e0e0e07c;
+    background-color: #5251517c;
     z-index: 0;
 }
 .landing .text{
@@ -172,7 +172,56 @@ body {
     top: 50%;
     transform: translateY(-50%);
     padding-left: 50px;
-    background-color: #1076ca4f;
+    background-color: #1076ca9d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6;
+}
+.landing .arrow-left,
+.landing .arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    z-index: 2;
+}
+.landing .arrow-left {
+    left: 10px;
+}
+.landing .arrow-right {
+    right: 10px;
+}
+.landing .bullet {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    bottom: 10px;
+    left: 50%;
+    border: 2px solid var(--main-color);
+    transform: translateX(-50%);
+}
+.landing .bullet::before,
+.landing  .bullet::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.landing .bullet::before {
+    top: -2px;
+    left: -28px;
+}
+.landing .bullet::after {
+    top: -2px;
+    right: -28px;
 }
 @media (max-width:808px) {
     .landing .text {
@@ -188,3 +237,44 @@ body {
     }
 }
 /* End Landing page */
+/* Start Services Section*/
+.container .title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    position: relative;
+}
+.container .title h2 {
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+}
+.container .title h2::after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 3px;
+    background-color: black;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.container .title h2::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 1;
+    border: 2px solid black;
+    left: 50%;
+    bottom: -30px;
+    transform: translate(-50%);
+}
+.container .title p {
+    width: 80%;
+    text-align: center;
+}
+/* End Services Section*/
