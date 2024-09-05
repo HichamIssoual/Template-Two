@@ -46,6 +46,7 @@ body {
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
+    z-index: 3;
 }
 .header .container {
     display: flex;
@@ -74,7 +75,8 @@ body {
     .container .nav .links {
         display: none;
     }
-    .container .nav .click:hover + ul {
+    .container .nav .click:hover + .links,
+    .container .nav  .links:hover {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -83,12 +85,25 @@ body {
         top: 80px;
         left: 0px;
         align-items: flex-start;
-        background-color: #21649b69;
+        background-color: #21649bc4;
+        font-size: 20px;
+        font-weight: bold;
         width: 100%;
+        padding: 0;
     }
     .header .container .links li a:hover::before,
     .header .container .links li .active::before {
         display: none;
+    }
+    .header .container .links li a {
+        color: white !important;
+    }
+    .header .container .links li .active {
+        color: white !important;
+    }
+    .header .container .links li {
+        width: 100%;
+        border-bottom: solid 2px black;
     }
 }
 @media (min-width:768px) {
@@ -128,3 +143,40 @@ body {
     padding-left: 10px;
 }
 /* End Header */
+/* Start Landing page */
+.landing {
+    background-color: var(--second-color);
+    background-image: url("../images/shuffle-02.jpg");
+    height: 100vh;
+    position: relative;
+}
+.landing .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e07c;
+    z-index: 0;
+}
+.landing .text{
+    position: absolute;
+    width: 50%;
+    height: 40%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 50px;
+    background-color: #1076ca4f;
+}
+@media (max-width:808px) {
+    .landing .text {
+        width: 70%;
+        height: 52%;
+    }
+}
+@media (max-width:360px) {
+    .landing .text {
+        top: 57%;
+        width: 75%;
+        height: 70%;
+    }
+}
+/* End Landing page */
