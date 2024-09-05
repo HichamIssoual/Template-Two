@@ -56,6 +56,10 @@ body {
     min-height: 97px;
     border-bottom: 3px solid #252525;
 }
+.header .container .logo {
+    font-size: 22px;
+    color: var(--main-color);
+}
 .header .container .nav {
     flex: 1;
     display: flex;
@@ -141,6 +145,10 @@ body {
 .header .container  .form {
     border-left: 2px solid;
     padding-left: 10px;
+}
+.header .container  .form .search {
+    font-size: 22px;
+    color: var(--main-color);
 }
 /* End Header */
 /* Start Landing page */
