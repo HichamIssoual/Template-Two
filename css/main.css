@@ -59,6 +59,7 @@ body {
 .header .container .logo {
     font-size: 22px;
     color: var(--main-color);
+    z-index: 3;
 }
 .header .container .nav {
     flex: 1;
@@ -149,6 +150,7 @@ body {
 .header .container  .form .search {
     font-size: 22px;
     color: var(--main-color);
+    z-index: 3;
 }
 /* End Header */
 /* Start Landing page */
@@ -237,7 +239,6 @@ body {
     }
 }
 /* End Landing page */
-/* Start Services Section*/
 .container .title {
     display: flex;
     align-items: center;
@@ -277,4 +278,6 @@ body {
     width: 80%;
     text-align: center;
 }
+/* Start Services Section*/
+
 /* End Services Section*/
