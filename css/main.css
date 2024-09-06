@@ -119,7 +119,8 @@ body {
 }
 .header .container .links li a {
     text-decoration: none;
-    color: black;
+    color: white;
+    font-weight: bold;
     padding: 15px !important;
     padding: 40px 10px;
     display: block;
