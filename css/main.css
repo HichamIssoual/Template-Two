@@ -75,6 +75,7 @@ body {
 }
 .header .container .nav .bars {
     margin-right: 10px;
+    font-size: 22px;
 }
 @media (max-width:768px){
     .container .nav .links {
@@ -244,6 +245,7 @@ body {
     align-items: center;
     flex-direction: column;
     margin-top: 50px;
+    margin-bottom: 50px;
     position: relative;
 }
 .container .title h2 {
@@ -280,7 +282,6 @@ body {
 }
 /* Start Services Section*/
 .container .srv {
-    margin-top: 60px;
     margin-bottom: 60px;
     display: flex;
     flex-wrap: wrap;
@@ -372,5 +373,114 @@ body {
 }
 /* End Services Section*/
 /* Start Portfolio Section*/
+.container .sorting {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.container .sorting span {
+    padding: 5px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.container .sorting span:hover,
+.container .sorting .active {
+    color: white;
+    background-color: var(--main-color);
+}
 
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(auto-fill,auto);
+    gap: 5px 10px;
+}
+@media (max-width:768px){
+    .portfolio {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(auto-fill,auto);
+    }
+}
+@media (min-width: 768px) and (max-width: 992px){
+    .portfolio {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(auto-fill,auto);
+    }
+}
+.portfolio img {
+    max-width: 100%;
+    transition-duration: 0.3s;
+}
+.portfolio .box {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio .box .transi {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+.portfolio div div .photo {
+    color: var(--main-color);
+}
+.portfolio .box:hover .transi{
+    bottom: 0;
+}
+.portfolio img:hover {
+    transform: scale(1.5) rotate(10deg);
+}
+.more {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.more button {
+    outline: none;
+    border: solid var(--main-color) 3px;
+    padding: 10px 15px;
+    background-color: transparent;
+    border-radius: 10%;
+    transition: 0.3s;
+}
+.more button:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+.video {
+    position: relative;
+}
+.video video {
+    max-width: 100%;
+}
+.video .text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    color: white;
+    white-space: nowrap;
+}
+@media (max-width: 350px) {
+    .video .text {
+        font-size: 13px;
+    }
+}
 /* End Portfolio Section*/
+/* Start About section */
+
+/* End About section */
