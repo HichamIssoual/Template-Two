@@ -483,5 +483,275 @@ body {
 }
 /* End Portfolio Section*/
 /* Start About section */
+.img-about .container {
+    display: flex;
+    justify-content: center;
+}
+.img-about .container img {
+    max-width: 100%;
+    position: relative;
+    top: 60px;
+    z-index: -1;
+}
+.background-about {
+    background-image: url("../images/stats.png");
+    background-color: var(--second-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    align-items: center;
+    padding: 10px;
+}
+.background-about .container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color: #1076ca98;
+    padding: 40px;
+    width: 100%;
+}
+@media (max-width:768px) {
+    .background-about {
+        height: fit-content;
+    }
+    .background-about .container {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .background-about .container .box-about {
+        width: 100%;
+    }
+}
+@media (min-width:769px) and (max-width:992px) {
+    .background-about {
+        height: 80vh;
+    }
+    .background-about .container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+.background-about .container .box-about {
+    text-align: center;
+    color: white;
+}
+.background-about .container .box-about .status-nums {
+    font-size: 35px;
+    font-weight: bold;
+}
+.background-about .container .box-about .icon-about {
+    background-color: black;
+    padding: 10px;
+    border-radius: 50%;
+}
+.container .about-testi-skill {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container .about-testi-skill .testimontals .comments-skill .img img {
+    max-width: 100px;
+}
+.container .about-testi-skill .testimontals,
+.container .about-testi-skill .skill {
+    width: 48%;
+    text-align: center;
 
+}
+.container .about-testi-skill .m-bottom {
+    margin-bottom: 60px;
+}
+.container .about-testi-skill .m-bottom-testi {
+    margin-bottom: 35px;
+}
+.container .about-testi-skill .testimontals .comment {
+    text-align: left;
+    padding: 10px 0;
+    border-bottom: #25252588 1px solid;
+}
+.container .about-testi-skill .testimontals .comment .the-comment {
+    line-height: 1.6;
+    margin-top: -10px;
+}
+.container .about-testi-skill .testimontals .comment .name-comentiare {
+    margin: 0;
+    text-align: right;
+    font-size: 15px;
+    opacity: 0.6;
+}
+@media (max-width:992px) {
+    .container .about-testi-skill .testimontals,
+    .container .about-testi-skill .skill {
+        width: 100%;
+    }
+}
+.container .about-testi-skill .testimontals .descri-about,
+.container .about-testi-skill .skill .descri-about {
+    opacity: 0.6;
+}
+.container .about-testi-skill .testimontals .comments-skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 94%;
+    gap: 6%;
+}
+.container .about-testi-skill .testimontals span{
+    margin-top: 20px;
+    display: inline-flex;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--second-color);
+}
+.container .about-testi-skill .testimontals .active {
+    background-color: var(--main-color);
+    width: 16px;
+    height: 16px;
+    border: none;
+}
+.container .about-testi-skill .skill .langs{
+    text-align: left;
+}
+.container .about-testi-skill .skill .langs p ~ p {
+    margin-top: 35px;
+}
+.container .about-testi-skill .skill .langs .language-prog {
+    width: 100%;
+    height: 40px;
+    background-color: var(--main-background-color);
+}
+/* adobe and php*/
+.container .about-testi-skill .skill .langs .language-prog .adobe,
+.container .about-testi-skill .skill .langs .language-prog .php {
+    background-color: var(--main-color);
+    width: 90%;
+    height: 100%;
+    position: relative;
+}
+.container .about-testi-skill .skill .langs .language-prog .adobe::after,
+.container .about-testi-skill .skill .langs .language-prog .php::after {
+    content: "90%";
+    position: absolute;
+    height: 100%;
+    padding: 0 10px;
+    top: -50px;
+    background-color: var(--second-color);
+    color: white;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+}
+.container .about-testi-skill .skill .langs .language-prog .adobe::before ,
+.container .about-testi-skill .skill .langs .language-prog .php::before
+{
+    content: '';
+    position: absolute;
+    top: -13px;
+    right: 10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid var(--second-color);
+}
+/* html css */
+.container .about-testi-skill .skill .langs .language-prog .html-css {
+    background-color: var(--main-color);
+    width: 85%;
+    height: 100%;
+    position: relative;
+}
+.container .about-testi-skill .skill .langs .language-prog .html-css::after {
+    content: "85%";
+    position: absolute;
+    height: 100%;
+    padding: 0 10px;
+    top: -50px;
+    background-color: var(--second-color);
+    color: white;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+}
+.container .about-testi-skill .skill .langs .language-prog .html-css::before {
+    content: '';
+    position: absolute;
+    top: -13px;
+    right: 10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid var(--second-color);
+}
+/* javascript */
+.container .about-testi-skill .skill .langs .language-prog .javascript {
+    background-color: var(--main-color);
+    width: 85%;
+    height: 100%;
+    position: relative;
+}
+.container .about-testi-skill .skill .langs .language-prog .javascript::after {
+    content: "85%";
+    position: absolute;
+    height: 100%;
+    padding: 0 10px;
+    top: -50px;
+    background-color: var(--second-color);
+    color: white;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+}
+.container .about-testi-skill .skill .langs .language-prog .javascript::before {
+    content: '';
+    position: absolute;
+    top: -13px;
+    right: 10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid var(--second-color);
+}
+.quote-background {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: var(--second-color);
+    background-image: url("../images/quote.jpg");
+    max-width: 100%;
+    height: 30vh;
+    position: relative;
+}
+.quote-background .overlay {
+    background-color: #252525b6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.quote-background q ,
+.quote-background p {
+    z-index: 4;
+}
+.quote-background p {
+    font-size: 15px;
+    font-weight: normal;
+}
 /* End About section */
+/* Start Pricing section */
+
+/* End Pricing section */
