@@ -9,7 +9,7 @@
     scroll-behavior: smooth;
 }
 :root {
-    --main-color: #1076ca;
+    --main-color: #05d7e6;
     --second-color: #252525;
     --main-background-color: #eee;
     --main-padding: 20px;
@@ -54,7 +54,7 @@ body {
     align-items: center;
     position: relative;
     min-height: 97px;
-    border-bottom: 3px solid #252525;
+    border-bottom: 1px solid #252525;
 }
 .header .container .logo {
     font-size: 22px;
@@ -141,8 +141,8 @@ body {
     content: '';
     position: absolute;
     width: 100%;
-    height: 3px;
-    bottom: -27px;
+    height: 1px;
+    bottom: -26px;
     background-color: var(--main-color);
 }
 .header .container  .form {
@@ -176,7 +176,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     padding-left: 50px;
-    background-color: #1076ca9d;
+    background-color: #05d7e680;
     color: white;
     display: flex;
     align-items: center;
@@ -508,7 +508,7 @@ body {
 .background-about .container {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    background-color: #1076ca98;
+    background-color: #05d7e663;
     padding: 40px;
     width: 100%;
 }
@@ -839,6 +839,7 @@ body {
     background-image: url("../images/subscribe.jpg");
     height: 30vh;
     max-width: 100%;
+    background-size: cover;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -852,6 +853,7 @@ body {
     border: 1px solid white;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     text-align: center;
     padding: 15px;
     font-size: 20px;
@@ -874,7 +876,105 @@ body {
     align-items: center;
     cursor: pointer;
 }
-@media (max-width:500px) {
+.container .contact {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.container .contact .texts-one,
+.container .contact .inputs {
+    width: 48%;
+}
+.container .contact .texts-one .title-import {
+    margin-top: 0;
+}
+.container .contact .texts-one .mt-60px {
+    margin-top: 60px;
+}
+.container .contact .texts-one p {
+    margin-bottom: 20px;
+}
+.container .contact .texts-one .opacity {
+    opacity: 0.5;
+}
+.container .contact .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+.container .contact .inputs input {
+    padding: 20px;
+    border: 1px solid var(--second-color);
+    outline: 0;
+}
+.container .contact .inputs .submit {
+    width: fit-content;
+    padding: 20px;
+    background-color: var(--main-color);
+    border: 1px solid var(--second-color);
+    outline: none;
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: -70px;
+}
+footer {
+    margin-top: 150px;
+    background-color: var(--second-color);
+    background-image: url("../images/subscribe.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    position: relative;
+}
+footer .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2525258a;
+    
+}
+footer .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+    z-index: 4;
+}
+footer .footer .logo {
+    font-size: 35px;
+    color: var(--main-color);
+}
+footer .footer .descri {
+    padding-bottom: 20px;
+    border-bottom: 2px solid white;
+    width: 100%;
+    align-self: center;
+}
+footer .footer .social {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    font-size: 15px;
+}
+footer .footer .copyright span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+@media (max-width:280px) {
+    .background-special-guest-contact .input i {
+        display: none;
+    }
+}
+@media (min-width:280px) and (max-width:500px) {
     .container .plans .plan {
         width: 100%;
     }
@@ -882,13 +982,14 @@ body {
         width: 30%;
     }
     .background-special-guest-contact .input {
-        width: 90%;
+        width: 100%;
     }
-    .background-special-guest-contact .para-special-guest p {
-        width: 90%;
-        width: 60%;
-        position: relative;
-        left: 25%;
+    .container .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container .contact .inputs {
+        width: 100%;
     }
 }
 @media (min-width:501px) and (max-width:991px) {
@@ -897,11 +998,6 @@ body {
     }
     .background-special-guest-contact .input {
         width: 60%;
-    }
-    .background-special-guest-contact .para-special-guest p {
-        width: 60%;
-        position: relative;
-        left: 20%;
     }
 }
 @media (min-width:992px) and (max-width:1200px) {
